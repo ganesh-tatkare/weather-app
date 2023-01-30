@@ -10,7 +10,7 @@ export default function App() {
   useEffect(() => {
     const getData = async () => {
       let response = await fetch(
-        `https://api.weatherapi.com/v1/search.json?key=a980c4e1f0ed4348b92113131221610&q=${city}`
+        `https://api.weatherapi.com/v1/search.json?key=28cfba4a29194d9abfd120501220406&q=${city}`
       );
       let data = await response.json();
       setCityList([...data]);
@@ -22,7 +22,7 @@ export default function App() {
   const getWeather = async () => {
     console.log('get weather for ', selectedCity);
     let response = await fetch(
-      `https://api.weatherapi.com/v1/forecast.json?key=a980c4e1f0ed4348b92113131221610&q=${selectedCity}&days=1&aqi=no&alerts=no`
+      `https://api.weatherapi.com/v1/forecast.json?key=28cfba4a29194d9abfd120501220406&q=${selectedCity}&days=1&aqi=no&alerts=no`
     );
     let data = await response.json();
     console.log(data);
